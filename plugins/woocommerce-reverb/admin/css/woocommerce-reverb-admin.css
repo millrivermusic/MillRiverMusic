@@ -1,0 +1,22 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.reverb_cat_select {width: 100%;}
+.acf-field-56e06823b9ec3 .acf-label {width:90%; float: left;}
+.acf-field-56e06823b9ec3 .acf-input {width:10%; float: left; margin-top: -5px;}
+
+.column-connections img.failed {
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+#reverb_product_data .reverb_fields {display:none;}
+
+#woocommerce-product-data ul.wc-tabs li.reverb-tab_options a:before {
+	content: url('../img/reverb-16x16.png');
+}
+
+.button-primary.sandbox {margin-left:20px;}

@@ -1,0 +1,50 @@
+{
+    "name": "platform/platform-wordpress",
+    "description": "WordPress for Platform.sh",
+    "license": "GPL-2.0+",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress-core-installer": "^1.0",
+        "johnpbloch/wordpress": "~4.8",
+        "wpackagist-plugin/woocommerce": "^3.2",
+        "wpackagist-plugin/backupwordpress": "^3.6",
+        "wpackagist-plugin/contact-form-7": "^5.0.1",
+        "wpackagist-plugin/multiple-roles": "^1.2",
+        "wpackagist-plugin/perfect-woocommerce-brands": "^1.6",
+        "wpackagist-plugin/pods": "^2.6",
+        "wpackagist-plugin/userswitcher": "^2.0",
+        "wpackagist-plugin/wc-vendors": "^1.9",
+        "wpackagist-plugin/woocommerce-gateway-paypal-powered-by-braintree": "^2.0",
+        "wpackagist-plugin/woocommerce-predictive-search": "^4.1",
+        "wpackagist-plugin/woocommerce-product-addon": "^10.9",
+        "wpackagist-plugin/woocommerce-products-slider": "^1.12",
+        "wpackagist-plugin/woocommerce-products-filter": "^1.1",
+        "wpackagist-plugin/woocommerce-services": "^1.9",
+        "wpackagist-plugin/woosquare": "^2.2",
+        "wpackagist-plugin/wp-smushit": "^2.7",
+        "wpackagist-plugin/woocommerce-jetpack": "^3.2",
+        "wpackagist-plugin/akismet": "^4.0",
+        "wpackagist-plugin/advanced-custom-fields": "^5.6",
+        "wpackagist-plugin/content-views-query-and-display-post-page": "^1.9.9.6",
+        "wpackagist-plugin/ni-woocommerce-cost-of-goods": "^2.0.1@dev"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "wp/wp-content/plugins/{$name}": ["type:wordpress-plugin"],
+            "wp/wp-content/themes/{$name}": ["type:wordpress-theme"],
+            "wp/wp-content/mu-plugins/{$name}": ["type:wordpress-muplugin"]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "cp wp-config.php wp/wp-config.php",
+            "cp wp-config-local.php wp/wp-config-local.php 2>/dev/null || :"
+        ]
+    }
+}
